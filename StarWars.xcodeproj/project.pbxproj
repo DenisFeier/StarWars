@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		FF2E8A4B24B74217008FA177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A4A24B74217008FA177 /* AppDelegate.swift */; };
 		FF2E8A4D24B74217008FA177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A4C24B74217008FA177 /* SceneDelegate.swift */; };
-		FF2E8A4F24B74217008FA177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A4E24B74217008FA177 /* ViewController.swift */; };
+		FF2E8A4F24B74217008FA177 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A4E24B74217008FA177 /* LoginViewController.swift */; };
 		FF2E8A5224B74217008FA177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2E8A5024B74217008FA177 /* Main.storyboard */; };
 		FF2E8A5424B74219008FA177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2E8A5324B74219008FA177 /* Assets.xcassets */; };
 		FF2E8A5724B74219008FA177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2E8A5524B74219008FA177 /* LaunchScreen.storyboard */; };
+		FF2E8A6024B75687008FA177 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A5F24B75687008FA177 /* CustomButton.swift */; };
+		FF2E8A6224B7570E008FA177 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A6124B7570E008FA177 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF2E8A4724B74217008FA177 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2E8A4A24B74217008FA177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF2E8A4C24B74217008FA177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF2E8A4E24B74217008FA177 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF2E8A4E24B74217008FA177 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FF2E8A5124B74217008FA177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF2E8A5324B74219008FA177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF2E8A5624B74219008FA177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF2E8A5824B74219008FA177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF2E8A5F24B75687008FA177 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		FF2E8A6124B7570E008FA177 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,25 @@
 		FF2E8A4924B74217008FA177 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				FF2E8A5E24B7564B008FA177 /* Custom Style */,
 				FF2E8A4A24B74217008FA177 /* AppDelegate.swift */,
 				FF2E8A4C24B74217008FA177 /* SceneDelegate.swift */,
-				FF2E8A4E24B74217008FA177 /* ViewController.swift */,
+				FF2E8A4E24B74217008FA177 /* LoginViewController.swift */,
 				FF2E8A5024B74217008FA177 /* Main.storyboard */,
 				FF2E8A5324B74219008FA177 /* Assets.xcassets */,
 				FF2E8A5524B74219008FA177 /* LaunchScreen.storyboard */,
 				FF2E8A5824B74219008FA177 /* Info.plist */,
 			);
 			path = StarWars;
+			sourceTree = "<group>";
+		};
+		FF2E8A5E24B7564B008FA177 /* Custom Style */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E8A5F24B75687008FA177 /* CustomButton.swift */,
+				FF2E8A6124B7570E008FA177 /* CustomTextField.swift */,
+			);
+			name = "Custom Style";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF2E8A4F24B74217008FA177 /* ViewController.swift in Sources */,
+				FF2E8A6024B75687008FA177 /* CustomButton.swift in Sources */,
+				FF2E8A4F24B74217008FA177 /* LoginViewController.swift in Sources */,
 				FF2E8A4B24B74217008FA177 /* AppDelegate.swift in Sources */,
 				FF2E8A4D24B74217008FA177 /* SceneDelegate.swift in Sources */,
+				FF2E8A6224B7570E008FA177 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
