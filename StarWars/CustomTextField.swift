@@ -22,23 +22,23 @@ class CustomTextField: UITextField {
     
     
     private func setUpField() {
-        tintColor             = .white
-        textColor             = .darkGray
-        font                  = UIFont(name: "Times New Roman", size: 18)
-        backgroundColor       = UIColor(white: 1.0, alpha: 0.5)
-        autocorrectionType    = .no
-        layer.cornerRadius    = 25.0
-        clipsToBounds         = true
+        tintColor = .blue
+        textColor = .darkGray
+        font = UIFont(name: "Times New Roman", size: 18)
+        backgroundColor = UIColor(white: 1.0, alpha: 0.5)
+        autocorrectionType = .no
+        layer.cornerRadius = 20.0
+        clipsToBounds = true
         
-        let placeholder       = self.placeholder != nil ? self.placeholder! : ""
-        let placeholderFont   = UIFont(name: "Times New Roman", size: 18)!
+        let placeholder = self.placeholder != nil ? self.placeholder! : ""
+        let placeholderFont = UIFont(name: "Times New Roman", size: 18)!
         attributedPlaceholder = NSAttributedString(string: placeholder, attributes:
             [NSAttributedString.Key.foregroundColor: UIColor.lightGray,
              NSAttributedString.Key.font: placeholderFont])
         
-        let indentView        = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        leftView              = indentView
-        leftViewMode          = .always
+        let indentView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        leftView = indentView
+        leftViewMode = .always
     }
 
 }

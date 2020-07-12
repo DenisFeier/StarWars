@@ -9,32 +9,38 @@
 import UIKit
 
 class CreateAccountViewController: UIViewController {
-    
+
     @IBOutlet weak var username: CustomTextField!
     @IBOutlet weak var password: CustomTextField!
-    @IBOutlet weak var userAge: UIDatePicker!
+    @IBOutlet weak var age: UIDatePicker!
+    @IBOutlet weak var userDescription: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        age.backgroundColor = .gray
+        view.backgroundColor = .black
+        password.isSecureTextEntry = true
     }
     
-    @IBAction func createAccount(_ sender: Any) {
-        
-        let userName = username.text ?? ""
-        let userPass = password.text ?? ""
-        let age = userAge.date
-        
-        let ac = UIAlertController(
-            title: "Your Data",
-            message: "Username: \(userName),"
-                    + "Password: \(userPass),"
-                    + "Age: \(age),",
-            preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "OK", style: .cancel)
-        
-        ac.addAction(action)
-        
-        present(ac, animated: true)
+    @IBAction func createAccountPushed(_ sender: Any) {
+        guard let name = username.text else { return }
+        guard let pass = password.text else { return }
+        let date = age.date
+        let desc = userDescription.text ?? ""
+        print(name, pass, date, desc)
+        if User.findByName(username: name) != nil {
+            let ac = UIAlertController(title: "Error", message: "User name found", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel)
+            ac.addAction(action)
+            present(ac, animated: true)
+        }
+        var users = User.getAllUsers()
+        let user = User(username: name, password: pass, birthDay: date, userDescription: desc)
+        users.append(user)
+        User.saveUsers(users: users)
+        dismiss(animated: true)
     }
+
 }

@@ -61,6 +61,9 @@
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="loginUser:" destination="HnV-9a-ERv" eventType="touchUpInside" id="vbO-qZ-Vc1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
@@ -103,15 +106,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lka-Ei-BFt"/>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="GW6-na-xz7" id="xWZ-kw-cRq"/>
+                        <outlet property="username" destination="39k-3c-mpU" id="ZtU-R6-TVE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ens-if-fgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101" y="17"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Account View Controller-->
         <scene sceneID="znX-VF-KoN">
             <objects>
-                <viewController id="KKw-zf-atr" sceneMemberID="viewController">
+                <viewController id="KKw-zf-atr" customClass="CreateAccountViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0dt-Zx-oeR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +141,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h2-hf-OTJ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="88" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsr-wy-gqp" customClass="CustomTextField" customModule="StarWars" customModuleProvider="target">
@@ -153,7 +160,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0b-Kn-NIZ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="83" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvr-a1-MYe" customClass="CustomTextField" customModule="StarWars" customModuleProvider="target">
@@ -172,7 +179,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRG-J9-ZFt">
                                                                         <rect key="frame" x="0.0" y="0.0" width="40.5" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="dYd-xk-2qp">
@@ -192,6 +199,9 @@
                                                             <constraint firstAttribute="height" constant="50" id="tRn-P8-3X9"/>
                                                         </constraints>
                                                         <state key="normal" title="Create Account"/>
+                                                        <connections>
+                                                            <action selector="createAccountPushed:" destination="KKw-zf-atr" eventType="touchUpInside" id="T79-oo-loX"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -227,6 +237,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q0n-Sf-3iy"/>
                     </view>
+                    <connections>
+                        <outlet property="age" destination="dYd-xk-2qp" id="jhM-hM-Yfh"/>
+                        <outlet property="password" destination="nvr-a1-MYe" id="2hz-9h-1ed"/>
+                        <outlet property="userDescription" destination="61u-ch-FNX" id="15Q-OP-KTk"/>
+                        <outlet property="username" destination="nvr-a1-MYe" id="9fv-3U-Kll"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZc-d4-xUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
