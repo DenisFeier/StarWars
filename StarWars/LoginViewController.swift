@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import Alamofire
 import SwiftyBeaver
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var username: CustomTextField!
     @IBOutlet weak var password: CustomTextField!
+    
     var logger: SwiftyBeaver.Type!
     
     override func viewDidLoad() {
@@ -20,8 +20,6 @@ class LoginViewController: UIViewController {
         
         password.isSecureTextEntry = true
         self.logger = SwiftyBeaver.self
-        let console = ConsoleDestination()
-        logger.addDestination(console)
     }
 
     @IBAction func loginUser(_ sender: Any) {
@@ -48,6 +46,7 @@ class LoginViewController: UIViewController {
                 present(wrongPass, animated: true)
             } else {
                 logger.info("Login succes")
+                User.loginSaveUser(username: user.username)
                 self.performSegue(withIdentifier: "LoginSucces", sender: user)
             }
         } else {
@@ -62,9 +61,5 @@ class LoginViewController: UIViewController {
         }
     }
     
-//    func randomHttp() {
-//        AF.request("https://httpbin.org/get").responseJSON { response in
-//        }
-//    }
 }
 
