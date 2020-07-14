@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30E0C8044493F62DD11E9F94 /* Pods_StarWars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D9954C0B38799719E5EF8C /* Pods_StarWars.framework */; };
 		FF2E8A4B24B74217008FA177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A4A24B74217008FA177 /* AppDelegate.swift */; };
 		FF2E8A4D24B74217008FA177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A4C24B74217008FA177 /* SceneDelegate.swift */; };
 		FF2E8A4F24B74217008FA177 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A4E24B74217008FA177 /* LoginViewController.swift */; };
@@ -19,9 +20,27 @@
 		FF81E6C324B8B35700874551 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81E6C224B8B35700874551 /* User.swift */; };
 		FF81E6C624B8B4EA00874551 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81E6C424B8B4EA00874551 /* KeychainWrapper.swift */; };
 		FF81E6C724B8B4EA00874551 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81E6C524B8B4EA00874551 /* KeychainItemAccessibility.swift */; };
+		FFA1B01A24BB623300DA792E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA1B01924BB623300DA792E /* SwiftyBeaver.framework */; };
+		FFA1B01D24BB625800DA792E /* SwiftyBeaver.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFA1B01C24BB625800DA792E /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FFA1B01624BB60B000DA792E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FFA1B01D24BB625800DA792E /* SwiftyBeaver.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		27D2FC56EBB465FBDEF1FCFA /* Pods-StarWars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars.release.xcconfig"; path = "Target Support Files/Pods-StarWars/Pods-StarWars.release.xcconfig"; sourceTree = "<group>"; };
+		3A98B876EC94E00AF3A20CAB /* Pods-StarWars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars.debug.xcconfig"; path = "Target Support Files/Pods-StarWars/Pods-StarWars.debug.xcconfig"; sourceTree = "<group>"; };
+		B4D9954C0B38799719E5EF8C /* Pods_StarWars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2E8A4724B74217008FA177 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2E8A4A24B74217008FA177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF2E8A4C24B74217008FA177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +55,8 @@
 		FF81E6C224B8B35700874551 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FF81E6C424B8B4EA00874551 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		FF81E6C524B8B4EA00874551 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		FFA1B01924BB623300DA792E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
+		FFA1B01C24BB625800DA792E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +64,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E0C8044493F62DD11E9F94 /* Pods_StarWars.framework in Frameworks */,
+				FFA1B01A24BB623300DA792E /* SwiftyBeaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B5C1CF5A07DD025F7D23516 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFA1B01924BB623300DA792E /* SwiftyBeaver.framework */,
+				B4D9954C0B38799719E5EF8C /* Pods_StarWars.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		745527F32E31742ADC5A1D33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A98B876EC94E00AF3A20CAB /* Pods-StarWars.debug.xcconfig */,
+				27D2FC56EBB465FBDEF1FCFA /* Pods-StarWars.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FF2E8A3E24B74217008FA177 = {
 			isa = PBXGroup;
 			children = (
+				FFA1B01C24BB625800DA792E /* SwiftyBeaver.framework */,
 				FF2E8A4924B74217008FA177 /* StarWars */,
 				FF2E8A4824B74217008FA177 /* Products */,
+				745527F32E31742ADC5A1D33 /* Pods */,
+				2B5C1CF5A07DD025F7D23516 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF2E8A5B24B74219008FA177 /* Build configuration list for PBXNativeTarget "StarWars" */;
 			buildPhases = (
+				AA77175196FDB953BAC14C1A /* [CP] Check Pods Manifest.lock */,
 				FF2E8A4324B74217008FA177 /* Sources */,
 				FF2E8A4424B74217008FA177 /* Frameworks */,
 				FF2E8A4524B74217008FA177 /* Resources */,
+				A7143AE0DC98E4B3BF8FB101 /* [CP] Embed Pods Frameworks */,
+				FFA1B01624BB60B000DA792E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -158,6 +205,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7143AE0DC98E4B3BF8FB101 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWars/Pods-StarWars-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWars/Pods-StarWars-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarWars/Pods-StarWars-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA77175196FDB953BAC14C1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarWars-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF2E8A4324B74217008FA177 /* Sources */ = {
@@ -314,9 +403,15 @@
 		};
 		FF2E8A5C24B74219008FA177 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A98B876EC94E00AF3A20CAB /* Pods-StarWars.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StarWars",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = StarWars/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,9 +426,15 @@
 		};
 		FF2E8A5D24B74219008FA177 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27D2FC56EBB465FBDEF1FCFA /* Pods-StarWars.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StarWars",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = StarWars/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

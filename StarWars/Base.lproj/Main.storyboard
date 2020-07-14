@@ -109,6 +109,7 @@
                     <connections>
                         <outlet property="password" destination="GW6-na-xz7" id="xWZ-kw-cRq"/>
                         <outlet property="username" destination="39k-3c-mpU" id="ZtU-R6-TVE"/>
+                        <segue destination="2lP-ci-ACe" kind="presentation" identifier="LoginSucces" modalPresentationStyle="fullScreen" id="cke-p3-FFG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ens-if-fgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -248,8 +249,111 @@
             </objects>
             <point key="canvasLocation" x="100.00000000000001" y="775.44642857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jpB-mh-JRy">
+            <objects>
+                <viewController id="7VV-PS-BuW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NiD-8B-N5f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPk-4G-Qpd">
+                                <rect key="frame" x="183" y="433" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <segue destination="HnV-9a-ERv" kind="presentation" modalPresentationStyle="fullScreen" id="EWr-pL-5zQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DPk-4G-Qpd" firstAttribute="centerX" secondItem="NiD-8B-N5f" secondAttribute="centerX" id="Kr3-do-Tej"/>
+                            <constraint firstItem="DPk-4G-Qpd" firstAttribute="centerY" secondItem="NiD-8B-N5f" secondAttribute="centerY" id="m3t-1v-Nx0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uht-Kz-ngN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AMv-av-yuD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BPJ-bV-KKm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3079.7101449275365" y="1183.9285714285713"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="umS-bJ-uYA">
+            <objects>
+                <viewController id="AdU-MZ-ezV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Syz-Xd-FU1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uCT-sJ-TRb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3EY-wI-W9h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MsJ-y8-YqH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3861" y="-169"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="NbD-mh-oYr">
+            <objects>
+                <tabBarController id="2lP-ci-ACe" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dRB-e9-CZX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ryR-Lw-yfV" kind="relationship" relationship="viewControllers" id="IIn-qq-ALv"/>
+                        <segue destination="eN9-I4-bQD" kind="relationship" relationship="viewControllers" id="CU9-q9-lqa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ug-nW-6Qk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677" y="17"/>
+        </scene>
+        <!--Content-->
+        <scene sceneID="YFS-5F-LJt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ryR-Lw-yfV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Content" image="folder.fill" catalog="system" id="5ze-dw-tHL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cef-Sm-h7Y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AdU-MZ-ezV" kind="relationship" relationship="rootViewController" id="3gN-0z-Xqa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOA-1c-JWB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3081" y="-169"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="76F-ro-i2f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eN9-I4-bQD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="A8Z-d8-gPe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9yU-sW-BTX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7VV-PS-BuW" kind="relationship" relationship="rootViewController" id="Xqo-dN-Q7f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVU-k3-C0C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3080" y="479"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="folder.fill" catalog="system" width="128" height="95"/>
         <image name="logo" width="2000" height="855"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>
