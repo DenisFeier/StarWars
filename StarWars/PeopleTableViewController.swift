@@ -11,63 +11,97 @@ import Alamofire
 import SwiftyBeaver
 
 class PeopleTableViewController: UITableViewController, UISearchBarDelegate {
-
-    var people: [Person] = []
-    var filteredPeople: [Person] = []
-    var logger: SwiftyBeaver.Type!
     
     @IBOutlet weak var searchBar: UISearchBar!
+
+    var unsafePeople: [Person] = []
+    var filteredPeople: [Person] = []
+    
+    var userInteractiveQueue: DispatchQueue!
+    
+    var logger: SwiftyBeaver.Type!
+    
+    var people: [Person] {
+        var people: [Person]!
+        userInteractiveQueue.sync {
+            people = self.unsafePeople
+        }
+        return people
+    }
     
     override func viewDidLoad() {
-        self.logger = SwiftyBeaver.self
-        self.logger.info("Table load")
         super.viewDidLoad()
+        self.logger = SwiftyBeaver.self
         searchBar.delegate = self
         
-        let userInteractiveQueue = DispatchQueue.global(qos: .userInteractive)
+        self.logger.info("Table load")
+        
+        self.userInteractiveQueue = DispatchQueue.global(qos: .userInteractive)
         
         AF.request("http://swapi.dev/api/people/?page=2").responseJSON(queue: userInteractiveQueue) { [unowned self] response in
             
             let jsondecoder = JSONDecoder()
-            self.logger.debug("try to load some data")
+            self.logger.info("try to load some data")
             
             guard let responseData = response.data else {
                 self.logger.error("Failed to fetch data")
                 return
             }
             
-            if let jsonData = try? jsondecoder.decode(People.self, from: responseData) {
-                self.people = jsonData.results
-                
-                let userInteractiveQueue = DispatchQueue.global(qos: .userInteractive)
-                
-                for (i, guy) in self.people.enumerated() {
-                    AF.request(guy.homeworld!).responseJSON(queue: userInteractiveQueue) { [unowned self] response in
-                        
-                        guard let homeworldData = response.data else {
-                            self.logger.error("Failed to decode homeworld data")
-                            return
-                        }
-                        
-                        if let jsonData = try? jsondecoder.decode(HomeWorld.self, from: homeworldData) {
-                            self.people[i].homeworld = jsonData.name
-                        } else {
-                            self.logger.error("Failed to parse json data")
-                        }
-                    }
-                }
-                
-            } else {
+            guard let jsonData = try? jsondecoder.decode(People.self, from: responseData) else {
                 self.logger.error("Failed to decode data")
+                return
             }
+            
+            self.unsafePeople = jsonData.results
             
             DispatchQueue.main.async { [unowned self] in
                 self.filteredPeople = self.people
                 self.tableView.reloadData()
             }
             
-        }
+            
+            for (i, person) in self.people.enumerated() {
+                AF.request(person.homeworld!).responseJSON(queue: self.userInteractiveQueue) { [unowned self] response in
+                    
+                    guard let homeworldData = response.data else {
+                        self.logger.error("Failed to decode homeworld data")
+                        return
+                    }
+                    
+                    guard let jsonHomeData = try? jsondecoder.decode(HomeWorld.self, from: homeworldData) else {
+                        self.logger.error("Failed to parse json data")
+                        return
+                    }
+                    
+                    self.userInteractiveQueue.async(flags: .barrier) { [unowned self] in
+                        self.unsafePeople[i].homeworld = jsonHomeData.name
+                        
+                        DispatchQueue.main.async { [unowned self] in
+                            self.filteredPeople = self.people
+                            let indexPath = IndexPath(item: i, section: 0)
+                            
+                           
+                            
+                            guard let contains = self.tableView.indexPathsForVisibleRows?.contains(where: {
+                                index in
+                                return index.row == indexPath.row && index.section == indexPath.section
+                            }) else {
+                                return
+                            }
+                            
+                            if contains {
+                                self.logger.debug("Update cell at index: \(i)")
+                                self.tableView.reloadRows(at: [indexPath], with: .fade)
+                            }
+                            
+                        }
+                    }
+                    
+                }
+            }
         
+        }
         
     }
 
@@ -90,9 +124,9 @@ class PeopleTableViewController: UITableViewController, UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredPeople = []
         if searchText == "" {
-            filteredPeople = people
+            filteredPeople = self.people
         } else {
-            for guy in people {
+            for guy in unsafePeople {
                 if guy.name!.lowercased().contains(searchText.lowercased()) {
                     filteredPeople.append(guy)
                 }
