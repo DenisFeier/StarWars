@@ -44,7 +44,7 @@ class ProfileViewController: UIViewController {
                 ac.addAction(action)
                 present(ac, animated: true)
             } else {
-                logger.error("New password doesn't match re-password")
+                logger.error("New password doesn't   match re-password")
                 let ac = UIAlertController(title: "Error", message: "New Password doesn't match with Re-Password", preferredStyle: .alert)
                 ac.addAction(action)
                 present(ac, animated: true)
