@@ -29,6 +29,8 @@ class PeopleTableViewController: UITableViewController, UISearchBarDelegate {
         return people
     }
     
+    var selectedPerson: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.logger = SwiftyBeaver.self
@@ -134,5 +136,19 @@ class PeopleTableViewController: UITableViewController, UISearchBarDelegate {
         }
         tableView.reloadData()
     }
+ 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedPerson = people[indexPath.row]
+        performSegue(withIdentifier: "toDetailsScreen", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsScreen" {
+            if let destCV = segue.destination as? DetailsScreenViewController {
+                destCV.person = self.selectedPerson
+            }
+        }
+    }
+    
     
 }
