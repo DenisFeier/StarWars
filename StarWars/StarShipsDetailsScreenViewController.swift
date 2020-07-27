@@ -42,8 +42,8 @@ class StarShipsDetailsScreenViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func tapCustomButton(_ sender: Any) {
-        
+    @IBAction func tapCustomButton(_ sender: CustomButton) {
+        sender.shake()
         let urlId = IDMapper.getIdFromURL(url: person.url!)
         guard let personeCoreData = PersonPer.checkIfExists(urlId: urlId, context: self.context) else { return }
         logger.info("Person name: \(String(describing: personeCoreData.name))")

@@ -36,6 +36,8 @@ class PeopleTableViewController: UITableViewController, UISearchBarDelegate {
         self.logger = SwiftyBeaver.self
         searchBar.delegate = self
         
+        view.backgroundColor = .black
+        
         self.logger.info("Table load")
         
         self.userInteractiveQueue = DispatchQueue.global(qos: .userInteractive)
@@ -108,18 +110,18 @@ class PeopleTableViewController: UITableViewController, UISearchBarDelegate {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        
+        return filteredPeople.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return filteredPeople.count
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "People") as! PersonTableViewCell
-        cell.setData(person: filteredPeople[indexPath.row])
+        cell.setData(person: filteredPeople[indexPath.section])
         return cell
     }
 
@@ -138,7 +140,7 @@ class PeopleTableViewController: UITableViewController, UISearchBarDelegate {
     }
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedPerson = people[indexPath.row]
+        self.selectedPerson = people[indexPath.section]
         performSegue(withIdentifier: "toDetailsScreen", sender: nil)
     }
     
@@ -150,5 +152,18 @@ class PeopleTableViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
+    // Set the spacing between sections
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let cellSpacingHeight: CGFloat = 5
+        return cellSpacingHeight
+    }
+       
+       // Make the background color show through
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+       let headerView = UIView()
+       headerView.backgroundColor = UIColor.clear
+       return headerView
+   }
+
     
 }

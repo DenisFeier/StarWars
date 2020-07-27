@@ -196,7 +196,7 @@
                                                     <constraint firstItem="34R-Ax-hre" firstAttribute="leading" secondItem="syV-h9-Ngv" secondAttribute="leading" constant="30" id="hlD-r0-FTM"/>
                                                 </constraints>
                                             </stackView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="61u-ch-FNX">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="61u-ch-FNX" customClass="CustomTextView" customModule="StarWars" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="258" width="366.5" height="125"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -286,7 +286,7 @@
                                                             <action selector="pushChangePass:" destination="7VV-PS-BuW" eventType="touchUpInside" id="Rp1-E2-d49"/>
                                                         </connections>
                                                     </button>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YPo-Dm-giV">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YPo-Dm-giV" customClass="CustomTextView" customModule="StarWars" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="276" width="394" height="128"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
@@ -690,7 +690,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OCX-CC-hfB">
                                 <rect key="frame" x="30" y="343" width="354" height="32"/>
                                 <segments>
-                                    <segment title="Filmes"/>
+                                    <segment title="Films"/>
                                     <segment title="StarShips"/>
                                 </segments>
                                 <connections>
@@ -840,10 +840,10 @@
             </objects>
             <point key="canvasLocation" x="3079.7101449275365" y="-380.35714285714283"/>
         </scene>
-        <!--Filme Table View Controller-->
+        <!--Film Table View Controller-->
         <scene sceneID="6J5-ai-KzN">
             <objects>
-                <viewController id="jA3-sH-ONA" customClass="FilmeTableViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jA3-sH-ONA" customClass="FilmTableViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n70-eD-TmD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -852,7 +852,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="filmeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="filmeCell" rowHeight="77" id="mTG-cu-6VF" customClass="FilmeTableViewCell" customModule="StarWars" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="filmeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="filmeCell" rowHeight="77" id="mTG-cu-6VF" customClass="FilmTableViewCell" customModule="StarWars" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mTG-cu-6VF" id="UoA-1k-6l0">
@@ -1075,7 +1075,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gf7-gx-Rde"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Select Ship"/>
                                 <connections>
                                     <action selector="tapCustomButton:" destination="tRQ-vz-dJ0" eventType="touchUpInside" id="afF-l3-4T1"/>
                                 </connections>

@@ -22,6 +22,15 @@ class LoginViewController: UIViewController {
         self.logger = SwiftyBeaver.self
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if let user = User.getLoginUser() {
+            logger.info("Auto login user with name: \(user.username)")
+            self.performSegue(withIdentifier: "LoginSucces", sender: user)
+        } else {
+            logger.info("No user to auto login")
+        }
+    }
+    
     @IBAction func loginUser(_ sender: Any) {
         guard let name = username.text else { return }
         guard let pass = password.text else { return }

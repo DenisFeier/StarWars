@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilmeTableViewCell: UITableViewCell {
+class FilmTableViewCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var releaseData: UILabel!

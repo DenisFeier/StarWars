@@ -25,6 +25,10 @@ class PersonTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.logger = SwiftyBeaver.self
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+        self.backgroundColor = .darkGray
+        self.setGradientBackground(colorOne: Colors.brightOrange, colorTwo: Colors.orange)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

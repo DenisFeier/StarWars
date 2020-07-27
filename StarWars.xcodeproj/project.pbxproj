@@ -22,12 +22,16 @@
 		FF2E8A6224B7570E008FA177 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A6124B7570E008FA177 /* CustomTextField.swift */; };
 		FF2E8A6824B7809C008FA177 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A6724B7809C008FA177 /* CreateAccountViewController.swift */; };
 		FF4D069724C5CED500888450 /* StarShipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D069624C5CED500888450 /* StarShipTableViewController.swift */; };
-		FF4D069924C5CF0700888450 /* FilmeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D069824C5CF0700888450 /* FilmeTableViewController.swift */; };
+		FF4D069924C5CF0700888450 /* FilmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D069824C5CF0700888450 /* FilmTableViewController.swift */; };
 		FF4D069B24C5D25100888450 /* ShipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D069A24C5D25100888450 /* ShipTableViewCell.swift */; };
-		FF4D069D24C5D26400888450 /* FilmeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D069C24C5D26400888450 /* FilmeTableViewCell.swift */; };
+		FF4D069D24C5D26400888450 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D069C24C5D26400888450 /* FilmTableViewCell.swift */; };
 		FF4D069F24C5E06500888450 /* StarShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D069E24C5E06500888450 /* StarShip.swift */; };
 		FF4D06A124C5E07200888450 /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D06A024C5E07200888450 /* Filme.swift */; };
+		FF5C719C24CF41B3001C39F1 /* ButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C719B24CF41B3001C39F1 /* ButtonAnimation.swift */; };
 		FF69680C24C71AD700E38F3E /* OpeningCrawlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69680B24C71AD700E38F3E /* OpeningCrawlViewController.swift */; };
+		FF726E8624C9CF3F0063038D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF726E8524C9CF3F0063038D /* UIView+Extension.swift */; };
+		FF726E8824C9CFD60063038D /* ConstantColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF726E8724C9CFD60063038D /* ConstantColors.swift */; };
+		FF726E8A24CA138D0063038D /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF726E8924CA138D0063038D /* CustomTextView.swift */; };
 		FF81E6C324B8B35700874551 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81E6C224B8B35700874551 /* User.swift */; };
 		FF81E6C624B8B4EA00874551 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81E6C424B8B4EA00874551 /* KeychainWrapper.swift */; };
 		FF81E6C724B8B4EA00874551 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81E6C524B8B4EA00874551 /* KeychainItemAccessibility.swift */; };
@@ -78,12 +82,16 @@
 		FF2E8A6124B7570E008FA177 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		FF2E8A6724B7809C008FA177 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		FF4D069624C5CED500888450 /* StarShipTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipTableViewController.swift; sourceTree = "<group>"; };
-		FF4D069824C5CF0700888450 /* FilmeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeTableViewController.swift; sourceTree = "<group>"; };
+		FF4D069824C5CF0700888450 /* FilmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewController.swift; sourceTree = "<group>"; };
 		FF4D069A24C5D25100888450 /* ShipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipTableViewCell.swift; sourceTree = "<group>"; };
-		FF4D069C24C5D26400888450 /* FilmeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeTableViewCell.swift; sourceTree = "<group>"; };
+		FF4D069C24C5D26400888450 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
 		FF4D069E24C5E06500888450 /* StarShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShip.swift; sourceTree = "<group>"; };
 		FF4D06A024C5E07200888450 /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
+		FF5C719B24CF41B3001C39F1 /* ButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimation.swift; sourceTree = "<group>"; };
 		FF69680B24C71AD700E38F3E /* OpeningCrawlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningCrawlViewController.swift; sourceTree = "<group>"; };
+		FF726E8524C9CF3F0063038D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FF726E8724C9CFD60063038D /* ConstantColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantColors.swift; sourceTree = "<group>"; };
+		FF726E8924CA138D0063038D /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		FF81E6C224B8B35700874551 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FF81E6C424B8B4EA00874551 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		FF81E6C524B8B4EA00874551 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
@@ -167,9 +175,9 @@
 				FF8BF68324C0A5C6006C3731 /* PersonTableViewCell.swift */,
 				FF1B61F724C25C470002C37B /* DetailsScreenViewController.swift */,
 				FF4D069624C5CED500888450 /* StarShipTableViewController.swift */,
-				FF4D069824C5CF0700888450 /* FilmeTableViewController.swift */,
+				FF4D069824C5CF0700888450 /* FilmTableViewController.swift */,
 				FF4D069A24C5D25100888450 /* ShipTableViewCell.swift */,
-				FF4D069C24C5D26400888450 /* FilmeTableViewCell.swift */,
+				FF4D069C24C5D26400888450 /* FilmTableViewCell.swift */,
 				FF69680B24C71AD700E38F3E /* OpeningCrawlViewController.swift */,
 				FFA85A2B24C88F4A00AF3777 /* StarShipsDetailsScreenViewController.swift */,
 				FF81E6C524B8B4EA00874551 /* KeychainItemAccessibility.swift */,
@@ -188,6 +196,8 @@
 			children = (
 				FF2E8A5F24B75687008FA177 /* CustomButton.swift */,
 				FF2E8A6124B7570E008FA177 /* CustomTextField.swift */,
+				FF726E8924CA138D0063038D /* CustomTextView.swift */,
+				FF5C719B24CF41B3001C39F1 /* ButtonAnimation.swift */,
 			);
 			name = "Custom Style";
 			sourceTree = "<group>";
@@ -220,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				FFA85A2E24C8ACAC00AF3777 /* IDMapper.swift */,
+				FF726E8524C9CF3F0063038D /* UIView+Extension.swift */,
+				FF726E8724C9CFD60063038D /* ConstantColors.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -342,27 +354,31 @@
 			files = (
 				FF2E8A6824B7809C008FA177 /* CreateAccountViewController.swift in Sources */,
 				FF4D069B24C5D25100888450 /* ShipTableViewCell.swift in Sources */,
+				FF5C719C24CF41B3001C39F1 /* ButtonAnimation.swift in Sources */,
 				FF2E8A6024B75687008FA177 /* CustomButton.swift in Sources */,
 				FFA85A2A24C8869600AF3777 /* StarShipPer+CoreDataClass.swift in Sources */,
 				FF14379524BDF9C100896EEC /* ProfileViewController.swift in Sources */,
+				FF726E8A24CA138D0063038D /* CustomTextView.swift in Sources */,
 				FF1C3C8624BF62ED00767381 /* PeopleTableViewController.swift in Sources */,
 				FF8BF67F24C0850D006C3731 /* People.swift in Sources */,
 				FF69680C24C71AD700E38F3E /* OpeningCrawlViewController.swift in Sources */,
 				FF2E8A4F24B74217008FA177 /* LoginViewController.swift in Sources */,
 				FFA85A2724C8869600AF3777 /* PersonPer+CoreDataProperties.swift in Sources */,
-				FF4D069D24C5D26400888450 /* FilmeTableViewCell.swift in Sources */,
+				FF4D069D24C5D26400888450 /* FilmTableViewCell.swift in Sources */,
+				FF726E8824C9CFD60063038D /* ConstantColors.swift in Sources */,
 				FF2E8A4B24B74217008FA177 /* AppDelegate.swift in Sources */,
 				FF4D069724C5CED500888450 /* StarShipTableViewController.swift in Sources */,
 				FF2E8A4D24B74217008FA177 /* SceneDelegate.swift in Sources */,
 				FF8BF68624C0B709006C3731 /* HomeWorld.swift in Sources */,
 				FF81E6C724B8B4EA00874551 /* KeychainItemAccessibility.swift in Sources */,
 				FFA85A2924C8869600AF3777 /* StarShipPer+CoreDataProperties.swift in Sources */,
+				FF726E8624C9CF3F0063038D /* UIView+Extension.swift in Sources */,
 				FF1B61F624C255560002C37B /* StarWarsModel.xcdatamodeld in Sources */,
 				FF81E6C624B8B4EA00874551 /* KeychainWrapper.swift in Sources */,
 				FF8BF68224C08566006C3731 /* Person.swift in Sources */,
 				FF2E8A6224B7570E008FA177 /* CustomTextField.swift in Sources */,
 				FF4D069F24C5E06500888450 /* StarShip.swift in Sources */,
-				FF4D069924C5CF0700888450 /* FilmeTableViewController.swift in Sources */,
+				FF4D069924C5CF0700888450 /* FilmTableViewController.swift in Sources */,
 				FFA85A2F24C8ACAC00AF3777 /* IDMapper.swift in Sources */,
 				FF8BF68424C0A5C6006C3731 /* PersonTableViewCell.swift in Sources */,
 				FFA85A2824C8869600AF3777 /* PersonPer+CoreDataClass.swift in Sources */,

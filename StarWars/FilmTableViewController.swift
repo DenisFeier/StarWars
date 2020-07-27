@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class FilmeTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FilmTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -54,7 +54,7 @@ class FilmeTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "filmeCell") as! FilmeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "filmeCell") as! FilmTableViewCell
         let film = films[indexPath.row]
         cell.setData(title: film.title!, releaseDate: film.release_date!)
         return cell

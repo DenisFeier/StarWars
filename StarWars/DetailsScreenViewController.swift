@@ -75,7 +75,7 @@ class DetailsScreenViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toFilmesTable" {
-            if let filmesTableVC = segue.destination as? FilmeTableViewController {
+            if let filmesTableVC = segue.destination as? FilmTableViewController {
                 filmesTableVC.filmesURLs = person.films
                 filmesTableVC.myNavigationController = navigationController
             }
