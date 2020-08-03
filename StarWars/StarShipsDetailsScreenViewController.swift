@@ -17,6 +17,8 @@ class StarShipsDetailsScreenViewController: UIViewController {
     @IBOutlet weak var model: UILabel!
     @IBOutlet weak var cargoCapacity: UILabel!
     @IBOutlet weak var starshipClass: UILabel!
+    @IBOutlet weak var containerDetails: ContainerDetailsView!
+    @IBOutlet weak var coolBtn: CoolButton!
     
     var logger: SwiftyBeaver.Type!
     
@@ -42,8 +44,16 @@ class StarShipsDetailsScreenViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func tapCustomButton(_ sender: CustomButton) {
-        sender.shake()
+    @IBAction func tapCustomButton(_ sender: CoolButton) {
+        sender.pulsate()
+        
+        let pulse = PulseAnimation(numberOfPulse: 1, radius: 100, postion: sender.center)
+        pulse.animationDuration = 1.0
+        let color = UIColor.red.cgColor
+        pulse.backgroundColor = color
+        self.view.layer.insertSublayer(pulse, below: self.view.layer)
+        self.view.bringSubviewToFront(coolBtn)
+        
         let urlId = IDMapper.getIdFromURL(url: person.url!)
         guard let personeCoreData = PersonPer.checkIfExists(urlId: urlId, context: self.context) else { return }
         logger.info("Person name: \(String(describing: personeCoreData.name))")
