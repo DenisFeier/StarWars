@@ -42,6 +42,11 @@ class ProfileViewController: UIViewController {
                 User.loginSaveUser(username: updated.username)
                 let ac = UIAlertController(title: "Password Updatd", message: "Your password has been updated", preferredStyle: .alert)
                 ac.addAction(action)
+                
+                self.oldPassword.text = ""
+                self.newPassword.text = ""
+                self.rePassword.text = ""
+                
                 present(ac, animated: true)
             } else {
                 logger.error("New password doesn't match re-password")

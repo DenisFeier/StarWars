@@ -21,6 +21,7 @@
 		FF2E8A6024B75687008FA177 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A5F24B75687008FA177 /* CustomButton.swift */; };
 		FF2E8A6224B7570E008FA177 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A6124B7570E008FA177 /* CustomTextField.swift */; };
 		FF2E8A6824B7809C008FA177 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E8A6724B7809C008FA177 /* CreateAccountViewController.swift */; };
+		FF47982F24D337DB00D12BB6 /* ContainerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF47982E24D337DB00D12BB6 /* ContainerDetailsView.swift */; };
 		FF4D069724C5CED500888450 /* StarShipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D069624C5CED500888450 /* StarShipTableViewController.swift */; };
 		FF4D069924C5CF0700888450 /* FilmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D069824C5CF0700888450 /* FilmTableViewController.swift */; };
 		FF4D069B24C5D25100888450 /* ShipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D069A24C5D25100888450 /* ShipTableViewCell.swift */; };
@@ -47,6 +48,8 @@
 		FFA85A2A24C8869600AF3777 /* StarShipPer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA85A2624C8869600AF3777 /* StarShipPer+CoreDataClass.swift */; };
 		FFA85A2C24C88F4A00AF3777 /* StarShipsDetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA85A2B24C88F4A00AF3777 /* StarShipsDetailsScreenViewController.swift */; };
 		FFA85A2F24C8ACAC00AF3777 /* IDMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA85A2E24C8ACAC00AF3777 /* IDMapper.swift */; };
+		FFCF5D2D24D497F000252D17 /* CoolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCF5D2C24D497EF00252D17 /* CoolButton.swift */; };
+		FFCF5D2F24D4992400252D17 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCF5D2E24D4992400252D17 /* PulseAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,6 +84,7 @@
 		FF2E8A5F24B75687008FA177 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		FF2E8A6124B7570E008FA177 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		FF2E8A6724B7809C008FA177 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		FF47982E24D337DB00D12BB6 /* ContainerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerDetailsView.swift; sourceTree = "<group>"; };
 		FF4D069624C5CED500888450 /* StarShipTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipTableViewController.swift; sourceTree = "<group>"; };
 		FF4D069824C5CF0700888450 /* FilmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewController.swift; sourceTree = "<group>"; };
 		FF4D069A24C5D25100888450 /* ShipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 		FFA85A2624C8869600AF3777 /* StarShipPer+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarShipPer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FFA85A2B24C88F4A00AF3777 /* StarShipsDetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipsDetailsScreenViewController.swift; sourceTree = "<group>"; };
 		FFA85A2E24C8ACAC00AF3777 /* IDMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDMapper.swift; sourceTree = "<group>"; };
+		FFCF5D2C24D497EF00252D17 /* CoolButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoolButton.swift; path = ../../CustomCoolButton/CustomCoolButton/CoolButton.swift; sourceTree = "<group>"; };
+		FFCF5D2E24D4992400252D17 /* PulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PulseAnimation.swift; path = ../../CustomCoolButton/CustomCoolButton/PulseAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,10 +200,13 @@
 		FF2E8A5E24B7564B008FA177 /* Custom Style */ = {
 			isa = PBXGroup;
 			children = (
+				FFCF5D2C24D497EF00252D17 /* CoolButton.swift */,
 				FF2E8A5F24B75687008FA177 /* CustomButton.swift */,
 				FF2E8A6124B7570E008FA177 /* CustomTextField.swift */,
 				FF726E8924CA138D0063038D /* CustomTextView.swift */,
 				FF5C719B24CF41B3001C39F1 /* ButtonAnimation.swift */,
+				FF47982E24D337DB00D12BB6 /* ContainerDetailsView.swift */,
+				FFCF5D2E24D4992400252D17 /* PulseAnimation.swift */,
 			);
 			name = "Custom Style";
 			sourceTree = "<group>";
@@ -364,6 +373,7 @@
 				FF69680C24C71AD700E38F3E /* OpeningCrawlViewController.swift in Sources */,
 				FF2E8A4F24B74217008FA177 /* LoginViewController.swift in Sources */,
 				FFA85A2724C8869600AF3777 /* PersonPer+CoreDataProperties.swift in Sources */,
+				FF47982F24D337DB00D12BB6 /* ContainerDetailsView.swift in Sources */,
 				FF4D069D24C5D26400888450 /* FilmTableViewCell.swift in Sources */,
 				FF726E8824C9CFD60063038D /* ConstantColors.swift in Sources */,
 				FF2E8A4B24B74217008FA177 /* AppDelegate.swift in Sources */,
@@ -382,7 +392,9 @@
 				FFA85A2F24C8ACAC00AF3777 /* IDMapper.swift in Sources */,
 				FF8BF68424C0A5C6006C3731 /* PersonTableViewCell.swift in Sources */,
 				FFA85A2824C8869600AF3777 /* PersonPer+CoreDataClass.swift in Sources */,
+				FFCF5D2F24D4992400252D17 /* PulseAnimation.swift in Sources */,
 				FFA85A2C24C88F4A00AF3777 /* StarShipsDetailsScreenViewController.swift in Sources */,
+				FFCF5D2D24D497F000252D17 /* CoolButton.swift in Sources */,
 				FF4D06A124C5E07200888450 /* Filme.swift in Sources */,
 				FF1B61F824C25C470002C37B /* DetailsScreenViewController.swift in Sources */,
 				FF81E6C324B8B35700874551 /* User.swift in Sources */,
