@@ -22,6 +22,8 @@ class FilmTableViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.backgroundColor = .black
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -49,22 +51,41 @@ class FilmTableViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
+           
         return films.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "filmeCell") as! FilmTableViewCell
-        let film = films[indexPath.row]
+        let film = films[indexPath.section]
         cell.setData(title: film.title!, releaseDate: film.release_date!)
         return cell
     }
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let opCV = storyboard?.instantiateViewController(identifier: "opCrawl") as? OpeningCrawlViewController {
-            opCV.film = films[indexPath.row]
+            opCV.film = films[indexPath.section]
             myNavigationController.pushViewController(opCV, animated: true)
         }
     }
+    
+    // Set the spacing between sections
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let cellSpacingHeight: CGFloat = 5
+        return cellSpacingHeight
+    }
+          
+          // Make the background color show through
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+
     
 }
