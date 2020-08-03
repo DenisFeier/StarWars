@@ -32,6 +32,8 @@ class StarShipTableViewController: UIViewController, UITableViewDelegate, UITabl
         
         self.logger = SwiftyBeaver.self
         
+        self.tableView.backgroundColor = .black
+        
         self.context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         tableView.delegate = self
@@ -94,15 +96,21 @@ class StarShipTableViewController: UIViewController, UITableViewDelegate, UITabl
         
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
         return ships.count
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let urlId = IDMapper.getIdFromURL(url: person.url!)
         let cell = tableView.dequeueReusableCell(withIdentifier: "shipCell") as! ShipTableViewCell
-        let ship = ships[indexPath.row]
+        let ship = ships[indexPath.section]
         
         if let personCoreData = PersonPer.checkIfExists(urlId: urlId, context: self.context) {
             if let currentShip = personCoreData.myShip {
@@ -119,7 +127,7 @@ class StarShipTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let view = storyboard?.instantiateViewController(identifier: "shipDetailView") as? StarShipsDetailsScreenViewController {
-            view.ship = ships[indexPath.row]
+            view.ship = ships[indexPath.section]
             view.person = person
             view.reloadTable = forTableReload
             myNavigationController?.pushViewController(view, animated: true)
@@ -130,4 +138,17 @@ class StarShipTableViewController: UIViewController, UITableViewDelegate, UITabl
         self.tableView.reloadData()
     }
     
+    // Set the spacing between sections
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let cellSpacingHeight: CGFloat = 5
+        return cellSpacingHeight
+    }
+          
+          // Make the background color show through
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+
 }
