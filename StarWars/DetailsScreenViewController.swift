@@ -24,6 +24,8 @@ class DetailsScreenViewController: UIViewController {
     @IBOutlet weak var filmesTableViewContainer: UIView!
     @IBOutlet weak var starShipsTableViewContainer: UIView!
     
+    @IBOutlet weak var containerDetailsView: UIView!
+    
     var logger: SwiftyBeaver.Type!
     
     var context: NSManagedObjectContext!
