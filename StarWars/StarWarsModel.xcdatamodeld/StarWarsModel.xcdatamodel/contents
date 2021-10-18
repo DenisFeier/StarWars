@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PersonPer" representedClassName="PersonPer" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="urlId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="myShip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StarShipPer" inverseName="myCrew" inverseEntity="StarShipPer"/>
+    </entity>
+    <entity name="StarShipPer" representedClassName="StarShipPer" syncable="YES">
+        <attribute name="cargo_capacity" optional="YES" attributeType="String"/>
+        <attribute name="crew" optional="YES" attributeType="String"/>
+        <attribute name="model" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="starship_class" optional="YES" attributeType="String"/>
+        <attribute name="urlId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="myCrew" toMany="YES" deletionRule="Nullify" destinationEntity="PersonPer" inverseName="myShip" inverseEntity="PersonPer"/>
+    </entity>
+    <elements>
+        <element name="PersonPer" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="StarShipPer" positionX="-63" positionY="-18" width="128" height="148"/>
+    </elements>
+</model>
