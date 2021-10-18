@@ -40,30 +40,13 @@
 		FF8BF68224C08566006C3731 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8BF68124C08566006C3731 /* Person.swift */; };
 		FF8BF68424C0A5C6006C3731 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8BF68324C0A5C6006C3731 /* PersonTableViewCell.swift */; };
 		FF8BF68624C0B709006C3731 /* HomeWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8BF68524C0B709006C3731 /* HomeWorld.swift */; };
-		FFA1B01A24BB623300DA792E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA1B01924BB623300DA792E /* SwiftyBeaver.framework */; };
-		FFA1B01D24BB625800DA792E /* SwiftyBeaver.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFA1B01C24BB625800DA792E /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FFA85A2724C8869600AF3777 /* PersonPer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA85A2324C8869600AF3777 /* PersonPer+CoreDataProperties.swift */; };
 		FFA85A2824C8869600AF3777 /* PersonPer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA85A2424C8869600AF3777 /* PersonPer+CoreDataClass.swift */; };
 		FFA85A2924C8869600AF3777 /* StarShipPer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA85A2524C8869600AF3777 /* StarShipPer+CoreDataProperties.swift */; };
 		FFA85A2A24C8869600AF3777 /* StarShipPer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA85A2624C8869600AF3777 /* StarShipPer+CoreDataClass.swift */; };
 		FFA85A2C24C88F4A00AF3777 /* StarShipsDetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA85A2B24C88F4A00AF3777 /* StarShipsDetailsScreenViewController.swift */; };
 		FFA85A2F24C8ACAC00AF3777 /* IDMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA85A2E24C8ACAC00AF3777 /* IDMapper.swift */; };
-		FFCF5D2D24D497F000252D17 /* CoolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCF5D2C24D497EF00252D17 /* CoolButton.swift */; };
-		FFCF5D2F24D4992400252D17 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCF5D2E24D4992400252D17 /* PulseAnimation.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		FFA1B01624BB60B000DA792E /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FFA1B01D24BB625800DA792E /* SwiftyBeaver.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		27D2FC56EBB465FBDEF1FCFA /* Pods-StarWars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars.release.xcconfig"; path = "Target Support Files/Pods-StarWars/Pods-StarWars.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,15 +87,12 @@
 		FF8BF68324C0A5C6006C3731 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		FF8BF68524C0B709006C3731 /* HomeWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorld.swift; sourceTree = "<group>"; };
 		FFA1B01924BB623300DA792E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
-		FFA1B01C24BB625800DA792E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		FFA85A2324C8869600AF3777 /* PersonPer+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PersonPer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FFA85A2424C8869600AF3777 /* PersonPer+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PersonPer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FFA85A2524C8869600AF3777 /* StarShipPer+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarShipPer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FFA85A2624C8869600AF3777 /* StarShipPer+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarShipPer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FFA85A2B24C88F4A00AF3777 /* StarShipsDetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipsDetailsScreenViewController.swift; sourceTree = "<group>"; };
 		FFA85A2E24C8ACAC00AF3777 /* IDMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDMapper.swift; sourceTree = "<group>"; };
-		FFCF5D2C24D497EF00252D17 /* CoolButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoolButton.swift; path = ../../CustomCoolButton/CustomCoolButton/CoolButton.swift; sourceTree = "<group>"; };
-		FFCF5D2E24D4992400252D17 /* PulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PulseAnimation.swift; path = ../../CustomCoolButton/CustomCoolButton/PulseAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +101,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E0C8044493F62DD11E9F94 /* Pods_StarWars.framework in Frameworks */,
-				FFA1B01A24BB623300DA792E /* SwiftyBeaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +128,6 @@
 		FF2E8A3E24B74217008FA177 = {
 			isa = PBXGroup;
 			children = (
-				FFA1B01C24BB625800DA792E /* SwiftyBeaver.framework */,
 				FF2E8A4924B74217008FA177 /* StarWars */,
 				FF2E8A4824B74217008FA177 /* Products */,
 				745527F32E31742ADC5A1D33 /* Pods */,
@@ -200,13 +178,11 @@
 		FF2E8A5E24B7564B008FA177 /* Custom Style */ = {
 			isa = PBXGroup;
 			children = (
-				FFCF5D2C24D497EF00252D17 /* CoolButton.swift */,
 				FF2E8A5F24B75687008FA177 /* CustomButton.swift */,
 				FF2E8A6124B7570E008FA177 /* CustomTextField.swift */,
 				FF726E8924CA138D0063038D /* CustomTextView.swift */,
 				FF5C719B24CF41B3001C39F1 /* ButtonAnimation.swift */,
 				FF47982E24D337DB00D12BB6 /* ContainerDetailsView.swift */,
-				FFCF5D2E24D4992400252D17 /* PulseAnimation.swift */,
 			);
 			name = "Custom Style";
 			sourceTree = "<group>";
@@ -257,7 +233,6 @@
 				FF2E8A4424B74217008FA177 /* Frameworks */,
 				FF2E8A4524B74217008FA177 /* Resources */,
 				A7143AE0DC98E4B3BF8FB101 /* [CP] Embed Pods Frameworks */,
-				FFA1B01624BB60B000DA792E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -392,9 +367,7 @@
 				FFA85A2F24C8ACAC00AF3777 /* IDMapper.swift in Sources */,
 				FF8BF68424C0A5C6006C3731 /* PersonTableViewCell.swift in Sources */,
 				FFA85A2824C8869600AF3777 /* PersonPer+CoreDataClass.swift in Sources */,
-				FFCF5D2F24D4992400252D17 /* PulseAnimation.swift in Sources */,
 				FFA85A2C24C88F4A00AF3777 /* StarShipsDetailsScreenViewController.swift in Sources */,
-				FFCF5D2D24D497F000252D17 /* CoolButton.swift in Sources */,
 				FF4D06A124C5E07200888450 /* Filme.swift in Sources */,
 				FF1B61F824C25C470002C37B /* DetailsScreenViewController.swift in Sources */,
 				FF81E6C324B8B35700874551 /* User.swift in Sources */,
